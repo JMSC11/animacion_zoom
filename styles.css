@@ -7,13 +7,13 @@ body, html {
     background-size: cover;
     background-position: center;
 }
-
 .contenedor-principal {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     position: relative; /* To position the content absolutely within */
+    z-index: 2;
 }
 
 #pantalla {
@@ -24,6 +24,7 @@ body, html {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    z-index: 3;
 }
 
 #imagen-pantalla {
@@ -49,4 +50,17 @@ body, html {
     justify-content: center;
     align-items: center;
     background-color: black; /* Background for content area */
+    z-index: 4;
+    
+}
+.fondo-oscurecedor {
+    position: fixed; /* Asegura que cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black; /* Color de oscurecimiento */
+    opacity: 0; /* Comienza completamente transparente */
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1; /* Asegúrate de que esté sobre la imagen de fondo pero debajo del contenido principal */
 }
