@@ -1,0 +1,52 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background-image: url('img/arte_pepsi-02.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* To position the content absolutely within */
+}
+
+#pantalla {
+    height: 100vh;
+    max-height: 700px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#imagen-pantalla {
+    max-width: 100%;
+    width: 60%; /* Tamaño inicial */
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center center;
+}
+
+#contenido {
+    opacity: 0; /* Start invisible */
+    position: absolute;
+    top: 34%; /* Adjust this to position the content correctly within the frame */
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 78%; /* Adjust width as needed to fit the TV screen */
+    height: 69%; /* Adjust height as needed to fit the TV screen */
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    overflow: hidden; /* Hide the overflow to keep content within the frame */
+    /* Additional styling to ensure content fits well within the frame */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Background for content area */
+}
