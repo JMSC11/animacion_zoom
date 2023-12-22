@@ -71,7 +71,7 @@ body, html {
     cursor: pointer;
     font-size: 16px; /* Ajusta esto según necesites */
     transition: background-color 0.3s ease;
-    width: 30%;
+
 }
 
 .boton:hover {
