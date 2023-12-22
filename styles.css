@@ -36,13 +36,17 @@ body, html {
 }
 
 #contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0; /* Start invisible */
     position: absolute;
-    top: 34%; /* Adjust this to position the content correctly within the frame */
-    left: 51%;
+    top: 30%; /* Adjust this to position the content correctly within the frame */
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 78%; /* Adjust width as needed to fit the TV screen */
-    height: 69%; /* Adjust height as needed to fit the TV screen */
+    width: 87%; /* Adjust width as needed to fit the TV screen */
+    height: 73%; /* Adjust height as needed to fit the TV screen */
     transition: opacity 0.5s ease-in-out;
     text-align: center;
     overflow: hidden; /* Hide the overflow to keep content within the frame */
@@ -50,9 +54,29 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black; /* Background for content area */
+    background-image: url('img/fondo-pantalla-contenido.png'); /* Background for content area */
+    background-size: cover;
     z-index: 4;
     
+}
+
+
+.boton {
+    background: linear-gradient(to right, #1E04B4, #5213FF);
+    color: white;
+    border: none;
+    border-radius: 5px; /* Ajusta esto para bordes redondeados */
+    padding: 15px 80px;
+    margin: 10px 0; /* Espacio entre botones */
+    cursor: pointer;
+    font-size: 16px; /* Ajusta esto según necesites */
+    transition: background-color 0.3s ease;
+    width: 30%;
+}
+
+.boton:hover {
+    background: linear-gradient(to left, #320DFA, #5213FF);
+    /* Efecto sutil al pasar el mouse por encima */
 }
 .fondo-oscurecedor {
     position: fixed; /* Asegura que cubra toda la pantalla */
@@ -65,4 +89,8 @@ body, html {
     transition: opacity 0.5s ease-in-out;
     z-index: 1; /* Asegúrate de que esté sobre la imagen de fondo pero debajo del contenido principal */
     opacity: 0;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
 }
