@@ -72,6 +72,7 @@ body, html {
     font-size: 16px; /* Ajusta esto según necesites */
     transition: background-color 0.3s ease;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .boton:hover {
@@ -105,6 +106,3 @@ body, html {
         z-index: 2;
     }
   }
-a {
-    font-weight: bold;
-}
