@@ -11,7 +11,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     position: relative; /* To position the content absolutely within */
     z-index: 2;
 }
@@ -71,11 +71,12 @@ body, html {
     cursor: pointer;
     font-size: 16px; /* Ajusta esto según necesites */
     transition: background-color 0.3s ease;
-
+    text-decoration: none;
 }
 
 .boton:hover {
     background: linear-gradient(to left, #320DFA, #5213FF);
+    color: white;
     /* Efecto sutil al pasar el mouse por encima */
 }
 .fondo-oscurecedor {
@@ -90,7 +91,20 @@ body, html {
     z-index: 1; /* Asegúrate de que esté sobre la imagen de fondo pero debajo del contenido principal */
     opacity: 0;
 }
+@media (max-width: 768px) {
+    .fondo-oscurecedor  {
+      position: absolute; /* o 'absolute' si prefieres */
+      z-index: 1; /* Asegura que está sobre el menú hamburguesa */
+      /* Otros estilos necesarios */
+    }
+  
+    .navbar-toggler {
+      z-index: 2; /* Superior al del elemento fijo para que se muestre encima */
+    }
+    .container-fluid{
+        z-index: 2;
+    }
+  }
 a {
-    text-decoration: none;
     font-weight: bold;
 }
